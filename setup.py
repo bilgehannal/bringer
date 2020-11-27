@@ -7,7 +7,7 @@ with io.open('README.md', encoding="utf-8") as f:
 
 setup(
     name = 'bringer',
-    version = '0.0.1',
+    version = '0.1.0',
     packages = ['bringer'],
     license = 'MIT',
     description = 'You can find the basic and usable scripts, code blocks or informations via using your command line with bringer',
