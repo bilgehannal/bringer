@@ -9,6 +9,7 @@ Bringer is a command line tool that tries to make faster your development proces
 ### How to use?
 
 To install: `pip install bringer`
+
 https://pypi.org/project/bringer/
 
 You can add labels that you want to give after the command of bringer like:
