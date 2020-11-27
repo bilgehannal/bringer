@@ -1,7 +1,0 @@
-name: 1.txt
-labels: yaml k8s kubernetes external service svc
-description: Example kubernetes external service description yaml
----
-name: 2.txt
-labels: k8s kubectl command cli pod connect bash sh ssh exec
-description: ssh connection to pod with kubectl
