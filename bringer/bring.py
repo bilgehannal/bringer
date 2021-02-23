@@ -4,6 +4,7 @@ import re
 from collections import Counter
 import pkg_resources
 from urllib.request import urlopen
+import os
 
 URL_BASE_OF_CONTENTS = "https://raw.githubusercontent.com/bilgehannal/bringer-data/main/contents"
 URL_CONTENT_FILE = "https://raw.githubusercontent.com/bilgehannal/bringer-data/main/content.yaml"
@@ -12,8 +13,8 @@ WORD = re.compile(r"\w+")
 
 f = urlopen(URL_CONTENT_FILE)
 tmp_str = f.read().decode("utf-8") 
-bios.write('content.yaml', tmp_str, file_type='standart')
-contents = bios.read('content.yaml')
+bios.write('bringer_content.yaml', tmp_str, file_type='standart')
+contents = bios.read('bringer_content.yaml')
 
 def text_to_vector(text):
     words = WORD.findall(text)
@@ -59,3 +60,4 @@ def print_content(content):
 def find_content(labels):
     content = compare_labels_with_all_content(labels)
     print_content(content)
+    os.remove('bringer_content.yaml')
